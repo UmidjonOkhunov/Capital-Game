@@ -1,0 +1,44 @@
+body {
+    background-color: #eee;
+    margin: 0 auto;
+    width: 600px;
+}
+
+/*your code here*/
+td.correct {
+  color: blue;
+}
+
+td.incorrect{
+  color: red;
+}
+
+table{
+  width:100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 4px;
+  border-bottom: 2px solid green;
+  text-align: left;
+  }
+
+td {
+  padding: 4px;
+  border-bottom: 1px solid #8ebf42;
+  text-align: left;
+  }
+
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index:1000 !important;
+} 
+
+#map{
+      height:450px;
+      width:600px;
+    }

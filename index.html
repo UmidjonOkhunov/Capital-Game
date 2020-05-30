@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Okhunov Umidjon 20180749</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link href="./capital_game.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Comic+Neue" rel="stylesheet">
+  </head>
+  <body>
+    <!--Your HTML here-->
+    <h1 style="font-weight: 900; font-family: 'Comic Neue',cursive;":>Do you know the capital of this country?</h1>
+    <iframe
+      name="ifrm"
+      id="ifrm"
+	  width="600"
+	  height="450"
+	  frameborder="0" style="border: 0"
+	  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAOR25-vse-iJ0pD5RrnhOqCOhHd2A1wJU
+
+	    &q=Singapore
+	    &language=en" allowfullscreen>
+	</iframe>
+    <table cellpadding="4" id="parent">
+      <tr>
+        <th>Country</th>
+        <th>Capital</th>
+        <th>Answer</th>
+      </tr>
+      <tr>
+        <td id="pr2__question" onmousemove='changeMap(this)'></td>
+        <td>
+          <input id="pr2__answer" type="text" autofocus>
+        </td>
+        <td>
+          <button type="submit" id="pr2__submit" onclick="submit()">See Answer</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="filters" colspan="3">
+        <label>
+          <input type="radio" name="filter" value="*" checked="checked" id='all'/> All
+        </label>
+        <label>
+          <input type="radio" name="filter" value="correct" /> Correct Only 
+        </label>
+        <label>
+          <input type="radio" name="filter" value="incorrect" /> Wrong Only 
+        </label>
+        </td>
+      </tr>
+      <tr>
+      	<td>
+      		<button id="pr3__undo" >Undo</button>
+      		<button id="pr3__clear" >Clear</button>
+      		<button id="pr3__restart" >Restart</button>
+      </tr>
+      <tr class="noEntry">
+        <td colspan="3" style="text-align: center">No entry to show</td>
+      </tr>
+    </table>
+
+
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+	     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyCGcf3vNegqWkDKc6dvjA7GTBUT6yIAD1k",
+	    authDomain: "capitalgame-70629.firebaseapp.com",
+	    databaseURL: "https://capitalgame-70629.firebaseio.com",
+	    projectId: "capitalgame-70629",
+	    storageBucket: "capitalgame-70629.appspot.com",
+	    messagingSenderId: "683861894090",
+	    appId: "1:683861894090:web:59203d7874bdb248a6a533",
+	    measurementId: "G-0P5J1K5GNP"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  firebase.analytics();
+
+	  const db = firebase.firestore();
+	</script>
+    <script src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script src="./capital_game.js"></script>
+  </body>
+</html>
